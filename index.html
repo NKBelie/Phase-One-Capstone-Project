@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+    <nav class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <a href="index.html" class="flex items-center gap-3 text-xl font-bold tracking-tight text-slate-950">
+                <span>Book Explorer</span>
+            </a>
+            <div class="flex items-center gap-1 rounded-lg bg-slate-100 p-1 text-sm font-medium text-slate-600">
+                <a href="index.html" class="rounded-md bg-white px-3 py-2 text-slate-950 shadow-sm">Home</a>
+                <a href="favorites.html" class="rounded-md px-3 py-2 transition hover:bg-white hover:text-slate-950">Favorites</a>
+                <a href="about.html" class="rounded-md px-3 py-2 transition hover:bg-white hover:text-slate-950">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="mx-auto flex max-w-6xl flex-1 flex-col gap-8 px-4 py-8 sm:px-6 lg:py-10">
+        <section class="grid gap-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-center">
+            <div>
+                <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Open Library search</p>
+                <h1 class="mt-2 max-w-3xl text-3xl font-bold tracking-tight text-slate-950 sm:text-5xl">Discover books and build your saved library.</h1>
+                <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600">Search real book data, compare results, and save favorites in a clean responsive app.</p>
+                <form id="search-form" class="mt-6 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+                <div>
+                    <label class="mb-2 block text-sm font-semibold text-slate-800" for="search-input">Search books</label>
+                    <input id="search-input" class="h-12 w-full rounded-lg border border-slate-300 bg-white px-4 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-4 focus:ring-teal-100" placeholder="Search by title, author, or topic" type="search">
+                </div>
+                <button class="inline-flex h-12 items-center justify-center rounded-lg bg-teal-700 px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-100" type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-950">Search Results</h2>
+                    <p class="mt-1 text-sm text-slate-500">Add books to your favorites for quick access later.</p>
+                </div>
+                <div id="feedback" class="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm ring-1 ring-slate-200" aria-live="polite"></div>
+            </div>
+            <div id="book-grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+        </section>
+    </main>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <p>&copy; 2026 Book Explorer</p>
+            <p>Built with HTML, Tailwind CSS, JavaScript, and Open Library.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+</html>
