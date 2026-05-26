@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Book Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+  <nav class="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <a href="index.html" class="flex items-center gap-3 text-xl font-bold tracking-tight text-slate-950">
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-700 text-sm font-bold text-white">BE</span>
+        <span>Book Explorer</span>
+      </a>
+      <div class="flex items-center gap-1 rounded-lg bg-slate-100 p-1 text-sm font-medium text-slate-600">
+        <a href="index.html" class="rounded-md px-3 py-2 transition hover:bg-white hover:text-slate-950">Home</a>
+        <a href="favorites.html" class="rounded-md px-3 py-2 transition hover:bg-white hover:text-slate-950">Favorites</a>
+        <a href="about.html" class="rounded-md bg-white px-3 py-2 text-slate-950 shadow-sm">About</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <img id="theme-icon" src="img/moon.svg" alt="" aria-hidden="true">
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto flex max-w-6xl flex-1 flex-col gap-8 px-4 py-8 sm:px-6 lg:py-10">
+    <section class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
+      <p class="text-sm font-semibold uppercase tracking-wide text-teal-700">Project overview</p>
+      <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Book Explorer</h1>
+      <p class="mt-3 max-w-3xl text-base leading-7 text-slate-600">A Phase 1 capstone project that combines responsive layout, API data, and browser storage in a simple book discovery experience.</p>
+    </section>
+
+    <section class="grid gap-5 sm:grid-cols-2">
+      <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-sm font-semibold text-teal-700">01</p>
+        <h2 class="mt-3 text-lg font-bold text-slate-950">Responsive interface</h2>
+        <p class="mt-2 leading-7 text-slate-600">The layout adapts cleanly from mobile to desktop, with readable spacing and predictable navigation.</p>
+      </article>
+      <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-sm font-semibold text-teal-700">02</p>
+        <h2 class="mt-3 text-lg font-bold text-slate-950">API-powered results</h2>
+        <p class="mt-2 leading-7 text-slate-600">Search results come from the Open Library API using asynchronous JavaScript and dynamic rendering.</p>
+      </article>
+      <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-sm font-semibold text-teal-700">03</p>
+        <h2 class="mt-3 text-lg font-bold text-slate-950">Persistent favorites</h2>
+        <p class="mt-2 leading-7 text-slate-600">Favorite books are stored with localStorage, so selections remain after refreshing the page.</p>
+      </article>
+      <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-sm font-semibold text-teal-700">04</p>
+        <h2 class="mt-3 text-lg font-bold text-slate-950">Organized modules</h2>
+        <p class="mt-2 leading-7 text-slate-600">The JavaScript is separated by responsibility, making the app easier to understand and maintain.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <p>&copy; 2026 Book Explorer</p>
+      <p>Built with HTML, Tailwind CSS, JavaScript, and Open Library.</p>
+    </div>
+  </footer>
+  <script type="module" src="js/theme.js"></script>
+</body>
+</html>
