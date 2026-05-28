@@ -139,6 +139,8 @@ The app includes a dark/light theme button in the navigation. The selected theme
     `-- theme.js
 ```
 
+The original planning notes from the `docs` folder have been combined into this README so the main project documentation is easier to review in one place.
+
 ## Capstone Checklist
 
 ### Learning Outcomes
